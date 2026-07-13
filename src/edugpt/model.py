@@ -76,3 +76,19 @@ class EduGPT:
         self.save_corpus(corpus)
         print("Corpus construido exitosamente.")
     
+# Mostrar informacion del corpus
+
+    def show_corpus_information(self, books, corpus):
+        total_books = len(books)
+        total_characters = len(corpus)
+        total_lines = len(corpus.splitlines())
+        total_words = len(corpus.split())
+
+        print("Corpus construido exitosamente.")
+        print(f"Libros procesados: {total_books}")
+        print(f"Caracteres: {total_characters}")
+        print(f"Líneas: {total_lines}")
+        print(f"Palabras: {total_words}")
+        print()
+        print(f"Archivo generado: {self.corpus_path}")
+
