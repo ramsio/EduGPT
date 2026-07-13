@@ -29,6 +29,7 @@ class EduGPT:
         print("Hola, todavía no sé nada.")
         print("Enséñame un libro.")
 
+# Encontrar libros
     def find_books(self):
         books = list(self.books_path.glob("*.txt"))
         return books
@@ -43,4 +44,35 @@ class EduGPT:
             print(f"{i}. {book.name}")
         print(f"\nTotal de libros: {len(books)}")
 
+# Leer y guardar corpus
+    def read_books(self, books):
+        corpus = " "
+        print("\nLeyendo libros...\n")
+        for book in books:
+            print(f"> Leyendo: {book.name}")
+            with open(book, "r", encoding="utf-8") as file:
+                corpus += file.read()
+                corpus += "\n"
+        return corpus
+    
+    def save_corpus(self, corpus):
+        self.processed_path.mkdir(exist_ok=True)
+        with open(self.corpus_path, "w", encoding="utf-8") as file:
+            file.write(corpus)
+
+# Construir corpus
+    def build_corpus(self):
+        books = self.find_books()
+        print("\n********** CONSTRUCCIÓN DEL CORPUS **********")
+        if not books:
+            print("\nNo se encontraron libros.")
+            return
+
+        print("\nLibros encontrados:\n")
+        for book in books:
+            print(f"/ {book.name}")
+
+        corpus = self.read_books(books)
+        self.save_corpus(corpus)
+        print("Corpus construido exitosamente.")
     
