@@ -92,3 +92,20 @@ class EduGPT:
         print()
         print(f"Archivo generado: {self.corpus_path}")
 
+# Menu Principal
+    def show_menu(self):
+        self.show_information()
+        print("1. Construir corpus")
+        print("2. Entrenar modelo")
+        print("3. Información del modelo")
+        print("0. Salir")
+        print()
+        return input("Seleccione una opción: ")
+
+    def train(self):
+        print()
+        print("=" * 45)
+        print("ENTRENAMIENTO")
+        print("=" * 45)
+        print()
+        print("Esta función estará disponible próximamente")
