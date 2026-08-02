@@ -1,4 +1,4 @@
- El perro es un animal.
+El perro es un animal.
 El gato es un animal.
 Los perros ladran.
 Los gatos maúllan.
