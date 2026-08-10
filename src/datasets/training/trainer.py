@@ -1,7 +1,7 @@
 from src.preprocessing.text_cleaner import TextCleaner
 from src.tokenizer.tokenizer import Tokenizer
-from src.vocabulary.vocabulary import Vocabulary
-from src.embeddings.embedding import Embedding
+from src.datasets.vocabulary.vocabulary import Vocabulary
+from src.datasets.embeddings.embedding import Embedding
 
 class Trainer:
     def __init__(self, corpus_builder):

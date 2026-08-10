@@ -1,7 +1,7 @@
 from src.models.model import EduGPT
 from src.datasets.corpus_builder import CorpusBuilder
 from src.tokenizer.tokenizer import Tokenizer
-from src.training.trainer import Trainer
+from src.datasets.training.trainer import Trainer
 
 def main():
     model = EduGPT()
